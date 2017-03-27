@@ -156,7 +156,7 @@
           
           
             
-              <a class="post-title-link" href="/2017/03/25/WebAPI/" itemprop="url">
+              <a class="post-title-link" href="/2017/03/25/webapi/" itemprop="url">
                 WebAPI
               </a>
             
@@ -193,8 +193,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2017/03/25/WebAPI/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/25/WebAPI/" itemprop="commentsCount"></span>
+              <a href="/2017/03/25/webapi/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/25/webapi/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -210,58 +210,686 @@
       
         
           <span itemprop="articleBody"><a id="more"></a>
-<h1 id="Web_API">Web API</h1><p>@(EBMS)[接口文档|示例]</p>
-<p>[TOC]</p>
-<h2 id="交易类型查询">交易类型查询</h2><blockquote>
-</blockquote>
-<h3 id="REQ">REQ</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">tradeCode</span>" : <span class="value"><span class="string">"codes.selectByPrimaryKey"</span></span>,</span><br><span class="line">	"<span class="attribute">fCatid</span>" : <span class="value"><span class="string">"JY"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="RESP">RESP</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fId</span>": <span class="value"><span class="string">"0001"</span></span>,</span><br><span class="line">      "<span class="attribute">fName</span>": <span class="value"><span class="string">"大额支付来账凭证"</span></span>,</span><br><span class="line">      "<span class="attribute">fCatid</span>": <span class="value"><span class="string">"JY"</span></span>,</span><br><span class="line">      "<span class="attribute">fPad1</span>": <span class="value"><span class="string">"9"</span></span><br><span class="line">    </span>&#125;,</span><br><span class="line">    ...</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="机构查询">机构查询</h2><blockquote>
-<p>根据上层机构dept查询子机构list</p>
-</blockquote>
-<h3 id="REQ-1">REQ</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">tradeCode</span>" : <span class="value"><span class="string">"branch.selectByPrimaryKey"</span></span>,</span><br><span class="line">	"<span class="attribute">fDept</span>" : <span class="value"><span class="string">"3401"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="RESP-1">RESP</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fId</span>": <span class="value"><span class="string">"3334"</span></span>,</span><br><span class="line">      "<span class="attribute">fValid</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">      "<span class="attribute">fLevel</span>": <span class="value"><span class="string">"2"</span></span>,</span><br><span class="line">      "<span class="attribute">fName</span>": <span class="value"><span class="string">"11123"</span></span>,</span><br><span class="line">      "<span class="attribute">fDept</span>": <span class="value"><span class="string">"3401"</span></span>,</span><br><span class="line">      "<span class="attribute">fTel</span>": <span class="value"><span class="string">"213"</span></span>,</span><br><span class="line">      "<span class="attribute">fAddr</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">      "<span class="attribute">fRecver</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">      "<span class="attribute">fDeptid</span>": <span class="value"><span class="string">"0000,3401,3334"</span></span><br><span class="line">    </span>&#125;,</span><br><span class="line">    ...</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="机构更新">机构更新</h2><blockquote>
-</blockquote>
-<h3 id="REQ-2">REQ</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"branch.updateByPrimaryKeySelective"</span></span>,</span><br><span class="line">	"<span class="attribute">fId</span>":<span class="value"><span class="string">"0003"</span></span>,</span><br><span class="line">    "<span class="attribute">fValid</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">    "<span class="attribute">fLevel</span>": <span class="value"><span class="string">"2"</span></span>,</span><br><span class="line">    "<span class="attribute">fName</span>": <span class="value"><span class="string">"11123"</span></span>,</span><br><span class="line">    "<span class="attribute">fDept</span>": <span class="value"><span class="string">"3401"</span></span>,</span><br><span class="line">    "<span class="attribute">fTel</span>": <span class="value"><span class="string">"213"</span></span>,</span><br><span class="line">    "<span class="attribute">fAddr</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">    "<span class="attribute">fRecver</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">    "<span class="attribute">fDeptid</span>": <span class="value"><span class="string">"0000,3401,3334"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="RESP-2">RESP</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="机构新增">机构新增</h2><blockquote>
-</blockquote>
-<h3 id="REQ-3">REQ</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"branch.insertSelective"</span></span>,</span><br><span class="line">	"<span class="attribute">fId</span>":<span class="value"><span class="string">"9999"</span></span>,</span><br><span class="line">    "<span class="attribute">fValid</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">    "<span class="attribute">fLevel</span>": <span class="value"><span class="string">"2"</span></span>,</span><br><span class="line">    "<span class="attribute">fName</span>": <span class="value"><span class="string">"11123"</span></span>,</span><br><span class="line">    "<span class="attribute">fDept</span>": <span class="value"><span class="string">"3401"</span></span>,</span><br><span class="line">    "<span class="attribute">fTel</span>": <span class="value"><span class="string">"213"</span></span>,</span><br><span class="line">    "<span class="attribute">fAddr</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">    "<span class="attribute">fRecver</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">    "<span class="attribute">fDeptid</span>": <span class="value"><span class="string">"0000,3401,3334"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="RESP-3">RESP</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="机构删除">机构删除</h2><blockquote>
-</blockquote>
-<h3 id="REQ-4">REQ</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"branch.deleteByPrimaryKey"</span></span>,</span><br><span class="line">	"<span class="attribute">fId</span>":<span class="value"><span class="string">"9999"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="RESP-4">RESP</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="设备查询">设备查询</h2><blockquote>
-</blockquote>
-<h3 id="REQ-5">REQ</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"dev.selectByPrimaryKey"</span></span>,</span><br><span class="line">	"<span class="attribute">fType</span>":<span class="value"><span class="string">"BST"</span></span>,</span><br><span class="line">	"<span class="attribute">fMark</span>":<span class="value"><span class="string">"NCR"</span></span>,</span><br><span class="line">	"<span class="attribute">fDept</span>":<span class="value"><span class="string">"0003"</span></span>,</span><br><span class="line">	"<span class="attribute">fUsestat</span>":<span class="value"><span class="string">"0"</span></span>,</span><br><span class="line">	"<span class="attribute">fSpc</span>":<span class="value"><span class="string">"2030"</span></span>,</span><br><span class="line">	"<span class="attribute">fAsserts</span>":<span class="value"><span class="string">"000001"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="RESP-5">RESP</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "rspCode": "00",</span><br><span class="line">  "rspMsg": "交易成功",</span><br><span class="line">  "listInfo": [</span><br><span class="line">    &#123;</span><br><span class="line">      "fId": "000001",</span><br><span class="line">      "fAdmht": "",</span><br><span class="line">      "fMac": "",</span><br><span class="line">      "fDtarriv": "",</span><br><span class="line">      "fDtimax": "",</span><br><span class="line">      "fBox": 0,</span><br><span class="line">      "fBuyht": "",</span><br><span class="line">      "fIp": "192.168.1.120",</span><br><span class="line">      ...</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="设备类型">设备类型</h2><blockquote>
-</blockquote>
-<h3 id="REQ-6">REQ</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"devtype.selectByPrimaryKey"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="RESP-6">RESP</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "rspCode": "00",</span><br><span class="line">  "rspMsg": "交易成功",</span><br><span class="line">  "listInfo": [</span><br><span class="line">    &#123;</span><br><span class="line">      "fId": "ATM", // id 作为设备品牌查询的入参</span><br><span class="line">      "fName": "ATM", // name 显示</span><br><span class="line">      "fMenus": "111111110000000000000000000000000000000000000000000000000000",</span><br><span class="line">      "fType": "1",</span><br><span class="line">      "fMbox": 7,</span><br><span class="line">      "fPad1": "",</span><br><span class="line">      "fParts": "11111111101111111000100000000000010000000000000000"</span><br><span class="line">    &#125;,</span><br><span class="line">    ...</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="设备品牌">设备品牌</h2><blockquote>
-</blockquote>
-<h3 id="REQ-7">REQ</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"defdev.selectMark"</span></span>,</span><br><span class="line">	"<span class="attribute">fDevtype</span>":<span class="value"><span class="string">"ATM"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="RESP-7">RESP</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fMark</span>": <span class="value"><span class="string">"123"</span> //option  id和name都是此值</span><br><span class="line">    </span>&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fMark</span>": <span class="value"><span class="string">"NCR"</span></span><br><span class="line">    </span>&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fMark</span>": <span class="value"><span class="string">"国光"</span></span><br><span class="line">    </span>&#125;</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="设备型号">设备型号</h2><blockquote>
-</blockquote>
-<h3 id="REQ-8">REQ</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"defdev.selectSpc"</span></span>,</span><br><span class="line">	"<span class="attribute">fDevtype</span>":<span class="value"><span class="string">"ATM"</span></span>,</span><br><span class="line">	"<span class="attribute">fMark</span>":<span class="value"><span class="string">"NCR"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="RESP-8">RESP</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fSpc</span>": <span class="value"><span class="string">"2030"</span> // 设备型号</span><br><span class="line">    </span>&#125;</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="设备状态">设备状态</h2><blockquote>
-</blockquote>
-<h3 id="REQ-9">REQ</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"codes.selectByPrimaryKey"</span></span>,</span><br><span class="line">	"<span class="attribute">fCatid</span>":<span class="value"><span class="string">"C1"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="RESP-9">RESP</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fId</span>": <span class="value"><span class="string">"0"</span></span>,</span><br><span class="line">      "<span class="attribute">fName</span>": <span class="value"><span class="string">"正常"</span></span>,</span><br><span class="line">      "<span class="attribute">fCatid</span>": <span class="value"><span class="string">"C1"</span></span>,</span><br><span class="line">      "<span class="attribute">fPad1</span>": <span class="value"><span class="string">""</span></span>,</span><br><span class="line">      "<span class="attribute">fNote</span>": <span class="value"><span class="string">""</span></span><br><span class="line">    </span>&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fId</span>": <span class="value"><span class="string">"2"</span></span>,</span><br><span class="line">      "<span class="attribute">fName</span>": <span class="value"><span class="string">"未启用"</span></span>,</span><br><span class="line">      "<span class="attribute">fCatid</span>": <span class="value"><span class="string">"C1"</span></span>,</span><br><span class="line">      "<span class="attribute">fPad1</span>": <span class="value"><span class="string">""</span></span>,</span><br><span class="line">      "<span class="attribute">fNote</span>": <span class="value"><span class="string">""</span></span><br><span class="line">    </span>&#125;</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="交易明细">交易明细</h2><blockquote>
-</blockquote>
-<h3 id="REQ-10">REQ</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"tradeCode":"mtrans.selectMTrans",</span><br><span class="line">	"startdate":"2014-01-01",//开始日期</span><br><span class="line">	"enddate":"2017-01-01",//结束日期</span><br><span class="line">	"starttime":"090000",//开始时间</span><br><span class="line">	"endtime":"180000",//结束时间</span><br><span class="line">	"deptid":"0000",//机构号</span><br><span class="line">	"fAcno":"6222022203004040596",//卡号</span><br><span class="line">	"fAcctno":"55555555555",//结账号</span><br><span class="line">	"fDevid":"34015001",//设备号</span><br><span class="line">	"fIdno":"6666666666",//身份证号</span><br><span class="line">	"fRet":"0",//交易结果 0:成功 1:失败</span><br><span class="line">	"fTrcd":"取款",// 交易类型 取值为t_codes f_catid='JY'的F_NAME</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="RESP-10">RESP</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fTrcd</span>": <span class="value"><span class="string">"取款"</span></span>,</span><br><span class="line">      "<span class="attribute">fMemo</span>": <span class="value"><span class="string">""</span></span>,</span><br><span class="line">      "<span class="attribute">fTime1</span>": <span class="value"><span class="string">"11:66"</span></span>,</span><br><span class="line">      "<span class="attribute">fIdno</span>": <span class="value"><span class="string">"6666666666"</span></span>,</span><br><span class="line">      "<span class="attribute">fZhname</span>": <span class="value"><span class="string">"XX市商业银行"</span></span>,</span><br><span class="line">      "<span class="attribute">fDate1</span>": <span class="value"><span class="string">"2015-09-01"</span></span>,</span><br><span class="line">      "<span class="attribute">fFhname</span>": <span class="value"><span class="string">"合肥"</span></span>,</span><br><span class="line">      "<span class="attribute">fDate</span>": <span class="value"><span class="string">"20150901"</span></span>,</span><br><span class="line">      "<span class="attribute">fDevls</span>": <span class="value"><span class="string">"25150901000003"</span></span>,</span><br><span class="line">      "<span class="attribute">fRcptno</span>": <span class="value"><span class="string">"12456"</span></span>,</span><br><span class="line">      "<span class="attribute">fChkno</span>": <span class="value"><span class="string">"4444554"</span></span>,</span><br><span class="line">      "<span class="attribute">fAcctoff</span>": <span class="value"><span class="string">"?"</span></span>,</span><br><span class="line">      "<span class="attribute">fAcctno</span>": <span class="value"><span class="string">"55555555555"</span></span>,</span><br><span class="line">      "<span class="attribute">fAcno</span>": <span class="value"><span class="string">"6222022203004040596"</span></span>,</span><br><span class="line">      "<span class="attribute">fCdno</span>": <span class="value"><span class="string">"555555555555"</span></span>,</span><br><span class="line">      "<span class="attribute">fTram</span>": <span class="value"><span class="number">66</span></span>,</span><br><span class="line">      "<span class="attribute">fTime</span>": <span class="value"><span class="string">"116611"</span></span>,</span><br><span class="line">      "<span class="attribute">fDevid</span>": <span class="value"><span class="string">"34015001"</span></span>,</span><br><span class="line">      "<span class="attribute">fDept</span>": <span class="value"><span class="string">"0005"</span></span>,</span><br><span class="line">      "<span class="attribute">fAcno2</span>": <span class="value"><span class="string">"123122222222222"</span></span>,</span><br><span class="line">      "<span class="attribute">fWdname</span>": <span class="value"><span class="string">"测试营业部3"</span></span>,</span><br><span class="line">      "<span class="attribute">fUsrno</span>": <span class="value"><span class="string">"444"</span></span>,</span><br><span class="line">      "<span class="attribute">fRetno</span>": <span class="value"><span class="string">"00"</span></span><br><span class="line">    </span>&#125;</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="表格AjaxUrl">表格AjaxUrl</h2><blockquote>
-</blockquote>
-<h3 id="机构">机构</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	ajax:'http://ip/table/branch/selectByPrimaryKey'</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="设备">设备</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	ajax:'http://ip/table/dev/selectByPrimaryKey'</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</span>
+<h1 id="web_api">web api</h1><p>[TOC]</p>
+<h2 id="交易明细查询">交易明细查询</h2><h3 id="REQ">REQ</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">示例</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">startdate</td>
+<td style="text-align:left">2014-01-01</td>
+<td style="text-align:left">开始日期</td>
+</tr>
+<tr>
+<td style="text-align:left">enddate</td>
+<td style="text-align:left">2017-01-01</td>
+<td style="text-align:left">结束日期</td>
+</tr>
+<tr>
+<td style="text-align:left">starttime</td>
+<td style="text-align:left">090000</td>
+<td style="text-align:left">开始时间</td>
+</tr>
+<tr>
+<td style="text-align:left">endtime</td>
+<td style="text-align:left">180000</td>
+<td style="text-align:left">结束时间</td>
+</tr>
+<tr>
+<td style="text-align:left">deptid</td>
+<td style="text-align:left">0000</td>
+<td style="text-align:left">机构号</td>
+</tr>
+<tr>
+<td style="text-align:left">fAcno</td>
+<td style="text-align:left">6222022203004040596</td>
+<td style="text-align:left">卡号</td>
+</tr>
+<tr>
+<td style="text-align:left">fAcctno</td>
+<td style="text-align:left">55555555555</td>
+<td style="text-align:left">结账号</td>
+</tr>
+<tr>
+<td style="text-align:left">fDevid</td>
+<td style="text-align:left">34015001</td>
+<td style="text-align:left">设备号</td>
+</tr>
+<tr>
+<td style="text-align:left">fIdno</td>
+<td style="text-align:left">6666666666</td>
+<td style="text-align:left">身份证号</td>
+</tr>
+<tr>
+<td style="text-align:left">fRet</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">交易结果 0:成功 1:失败</td>
+</tr>
+<tr>
+<td style="text-align:left">fTrcd</td>
+<td style="text-align:left">取款</td>
+<td style="text-align:left">交易类型 取值为t_codes f_catid=’JY’的F_NAME</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"mtrans.selectMTrans"</span></span>,</span><br><span class="line">  "<span class="attribute">startdate</span>":<span class="value"><span class="string">"2014-01-01"</span></span>,</span><br><span class="line">  "<span class="attribute">enddate</span>":<span class="value"><span class="string">"2017-01-01"</span></span>,</span><br><span class="line">  "<span class="attribute">starttime</span>":<span class="value"><span class="string">"090000"</span></span>,</span><br><span class="line">  "<span class="attribute">endtime</span>":<span class="value"><span class="string">"180000"</span></span>,</span><br><span class="line">  "<span class="attribute">deptid</span>":<span class="value"><span class="string">"0000"</span></span>,</span><br><span class="line">  "<span class="attribute">fAcno</span>":<span class="value"><span class="string">"6222022203004040596"</span></span>,</span><br><span class="line">  "<span class="attribute">fAcctno</span>":<span class="value"><span class="string">"55555555555"</span></span>,</span><br><span class="line">  "<span class="attribute">fDevid</span>":<span class="value"><span class="string">"34015001"</span></span>,</span><br><span class="line">  "<span class="attribute">fIdno</span>":<span class="value"><span class="string">"6666666666"</span></span>,</span><br><span class="line">  "<span class="attribute">fRet</span>":<span class="value"><span class="string">"0"</span></span>,</span><br><span class="line">  "<span class="attribute">fTrcd</span>":<span class="value"><span class="string">"取款"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="RESP">RESP</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">字段</th>
+<th style="text-align:left">别名</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">F_DATE</td>
+<td style="text-align:left">fDate</td>
+<td style="text-align:left">交易日期</td>
+</tr>
+<tr>
+<td style="text-align:left">F_TIME</td>
+<td style="text-align:left">fTime</td>
+<td style="text-align:left">交易时间</td>
+</tr>
+<tr>
+<td style="text-align:left">F_DEVID</td>
+<td style="text-align:left">fDevid</td>
+<td style="text-align:left">设备编号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_DEPT</td>
+<td style="text-align:left">fDept</td>
+<td style="text-align:left">归属的网点号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_TRCD</td>
+<td style="text-align:left">fTrcd</td>
+<td style="text-align:left">交易代码</td>
+</tr>
+<tr>
+<td style="text-align:left">F_ACNO</td>
+<td style="text-align:left">fAcno</td>
+<td style="text-align:left">卡号/账号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_ACNO2</td>
+<td style="text-align:left">fAcno2</td>
+<td style="text-align:left">账号二</td>
+</tr>
+<tr>
+<td style="text-align:left">F_CDNO</td>
+<td style="text-align:left">fCdno</td>
+<td style="text-align:left">卡号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_IDNO</td>
+<td style="text-align:left">fIdno</td>
+<td style="text-align:left">身份证号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_USRNO</td>
+<td style="text-align:left">fUsrno</td>
+<td style="text-align:left">用户编号， 如手机号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_TRAM</td>
+<td style="text-align:left">fTram</td>
+<td style="text-align:left">交易金额</td>
+</tr>
+<tr>
+<td style="text-align:left">F_FEE</td>
+<td style="text-align:left">fFee</td>
+<td style="text-align:left">手续费</td>
+</tr>
+<tr>
+<td style="text-align:left">F_DEVLS</td>
+<td style="text-align:left">fDevls</td>
+<td style="text-align:left">设备交易流水</td>
+</tr>
+<tr>
+<td style="text-align:left">F_RCPTNO</td>
+<td style="text-align:left">fRcptno</td>
+<td style="text-align:left">交易收据号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_CHKNO</td>
+<td style="text-align:left">fChkno</td>
+<td style="text-align:left">对账流水号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_ACCTNO</td>
+<td style="text-align:left">fAcctno</td>
+<td style="text-align:left">结账号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_ACCTOFF</td>
+<td style="text-align:left">fAcctoff</td>
+<td style="text-align:left">是否结账： ’1’－是， ’0’－否</td>
+</tr>
+<tr>
+<td style="text-align:left">F_RETNO</td>
+<td style="text-align:left">fRetno</td>
+<td style="text-align:left">交易结果</td>
+</tr>
+<tr>
+<td style="text-align:left">F_STCD</td>
+<td style="text-align:left">fStcd</td>
+<td style="text-align:left">本记录被冲正标记： ‘0’=正常， ‘1’=被冲流水</td>
+</tr>
+<tr>
+<td style="text-align:left">F_MEMO</td>
+<td style="text-align:left">fMemo</td>
+<td style="text-align:left">备注</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fTrcd</span>": <span class="value"><span class="string">"取款"</span></span>,</span><br><span class="line">      "<span class="attribute">fMemo</span>": <span class="value"><span class="string">""</span></span>,</span><br><span class="line">      "<span class="attribute">fTime1</span>": <span class="value"><span class="string">"11:66"</span></span>,</span><br><span class="line">      "<span class="attribute">fIdno</span>": <span class="value"><span class="string">"6666666666"</span></span>,</span><br><span class="line">      "<span class="attribute">fZhname</span>": <span class="value"><span class="string">"XX市商业银行"</span></span>,</span><br><span class="line">      "<span class="attribute">fDate1</span>": <span class="value"><span class="string">"2015-09-01"</span></span>,</span><br><span class="line">      "<span class="attribute">fFhname</span>": <span class="value"><span class="string">"合肥"</span></span>,</span><br><span class="line">      "<span class="attribute">fDate</span>": <span class="value"><span class="string">"20150901"</span></span>,</span><br><span class="line">      "<span class="attribute">fDevls</span>": <span class="value"><span class="string">"25150901000003"</span></span>,</span><br><span class="line">      "<span class="attribute">fRcptno</span>": <span class="value"><span class="string">"12456"</span></span>,</span><br><span class="line">      "<span class="attribute">fChkno</span>": <span class="value"><span class="string">"4444554"</span></span>,</span><br><span class="line">      "<span class="attribute">fAcctoff</span>": <span class="value"><span class="string">""</span></span>,</span><br><span class="line">      "<span class="attribute">fAcctno</span>": <span class="value"><span class="string">"55555555555"</span></span>,</span><br><span class="line">      "<span class="attribute">fAcno</span>": <span class="value"><span class="string">"6222022203004040596"</span></span>,</span><br><span class="line">      "<span class="attribute">fCdno</span>": <span class="value"><span class="string">"555555555555"</span></span>,</span><br><span class="line">      "<span class="attribute">fTram</span>": <span class="value"><span class="number">66</span></span>,</span><br><span class="line">      "<span class="attribute">fTime</span>": <span class="value"><span class="string">"116611"</span></span>,</span><br><span class="line">      "<span class="attribute">fDevid</span>": <span class="value"><span class="string">"34015001"</span></span>,</span><br><span class="line">      "<span class="attribute">fDept</span>": <span class="value"><span class="string">"0005"</span></span>,</span><br><span class="line">      "<span class="attribute">fAcno2</span>": <span class="value"><span class="string">"123122222222222"</span></span>,</span><br><span class="line">      "<span class="attribute">fWdname</span>": <span class="value"><span class="string">"测试营业部3"</span></span>,</span><br><span class="line">      "<span class="attribute">fUsrno</span>": <span class="value"><span class="string">"444"</span></span>,</span><br><span class="line">      "<span class="attribute">fRetno</span>": <span class="value"><span class="string">"00"</span></span><br><span class="line">    </span>&#125;</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="机构管理">机构管理</h2><h3 id="机构查询">机构查询</h3><h4 id="REQ-1">REQ</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fDept</td>
+<td>3401</td>
+<td>上级机构号，顶级机构为0000</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>" : <span class="value"><span class="string">"branch.selectByPrimaryKey"</span></span>,</span><br><span class="line">  "<span class="attribute">fDept</span>" : <span class="value"><span class="string">"3401"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="RESP-1">RESP</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">字段</th>
+<th style="text-align:left">别名</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">F_ID</td>
+<td style="text-align:left">fId</td>
+<td style="text-align:left">机构代码</td>
+</tr>
+<tr>
+<td style="text-align:left">F_NAME</td>
+<td style="text-align:left">fName</td>
+<td style="text-align:left">机构名称</td>
+</tr>
+<tr>
+<td style="text-align:left">F_DEPT</td>
+<td style="text-align:left">fDept</td>
+<td style="text-align:left">上级机构代码， 省行为’####’</td>
+</tr>
+<tr>
+<td style="text-align:left">F_DEPTID</td>
+<td style="text-align:left">fDeptid</td>
+<td style="text-align:left">上级机构代码链表， 包括本身， 以方便查询统计。 格式为： 省行,市行,支行,网点， 中间以逗号’,’分隔</td>
+</tr>
+<tr>
+<td style="text-align:left">F_LEVEL</td>
+<td style="text-align:left">fLevel</td>
+<td style="text-align:left">级别： ‘1’=网点， ‘2’=支行， ‘3’=市行， ‘4’=省行</td>
+</tr>
+<tr>
+<td style="text-align:left">F_ADDR</td>
+<td style="text-align:left">fAddr</td>
+<td style="text-align:left">所在地址</td>
+</tr>
+<tr>
+<td style="text-align:left">F_AREAID</td>
+<td style="text-align:left">fAreaid</td>
+<td style="text-align:left">地区代码</td>
+</tr>
+<tr>
+<td style="text-align:left">F_UNM</td>
+<td style="text-align:left">fUnm</td>
+<td style="text-align:left">属性： ‘1’=在行， ‘2’=离行， ‘3’=自助</td>
+</tr>
+<tr>
+<td style="text-align:left">F_DEVNUM</td>
+<td style="text-align:left">fDevnum</td>
+<td style="text-align:left">设备数量（ 市行有效）。</td>
+</tr>
+<tr>
+<td style="text-align:left">F_MAPID</td>
+<td style="text-align:left">fMapid</td>
+<td style="text-align:left">地图编号， 0=没有地图</td>
+</tr>
+<tr>
+<td style="text-align:left">F_MAPX</td>
+<td style="text-align:left">fMapx</td>
+<td style="text-align:left">此机构在地图上的横坐标</td>
+</tr>
+<tr>
+<td style="text-align:left">F_MAPY</td>
+<td style="text-align:left">fMapy</td>
+<td style="text-align:left">此机构在地图上的纵坐标</td>
+</tr>
+<tr>
+<td style="text-align:left">F_TEL</td>
+<td style="text-align:left">fTel</td>
+<td style="text-align:left">联系电话</td>
+</tr>
+<tr>
+<td style="text-align:left">F_RECVER</td>
+<td style="text-align:left">fRecver</td>
+<td style="text-align:left">事件接收操作员号（ 营业时段内）</td>
+</tr>
+<tr>
+<td style="text-align:left">F_RECVER1</td>
+<td style="text-align:left">fRecver1</td>
+<td style="text-align:left">事件接收操作员号（ 营业时段外）</td>
+</tr>
+<tr>
+<td style="text-align:left">F_VALID</td>
+<td style="text-align:left">fValid</td>
+<td style="text-align:left">是否有效（ 机构记录被删除后置为无效）， 1－有效（ 默认）， 0－无效</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fId</span>": <span class="value"><span class="string">"3334"</span></span>,</span><br><span class="line">      "<span class="attribute">fValid</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">      "<span class="attribute">fLevel</span>": <span class="value"><span class="string">"2"</span></span>,</span><br><span class="line">      "<span class="attribute">fName</span>": <span class="value"><span class="string">"11123"</span></span>,</span><br><span class="line">      "<span class="attribute">fDept</span>": <span class="value"><span class="string">"3401"</span></span>,</span><br><span class="line">      "<span class="attribute">fTel</span>": <span class="value"><span class="string">"213"</span></span>,</span><br><span class="line">      "<span class="attribute">fAddr</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">      "<span class="attribute">fRecver</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">      "<span class="attribute">fDeptid</span>": <span class="value"><span class="string">"0000,3401,3334"</span></span><br><span class="line">    </span>&#125;,</span><br><span class="line">    ...</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="机构新增">机构新增</h3><h4 id="REQ-2">REQ</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"branch.insertSelective"</span></span>,</span><br><span class="line">  "<span class="attribute">fId</span>":<span class="value"><span class="string">"9999"</span></span>,</span><br><span class="line">  "<span class="attribute">fValid</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">  "<span class="attribute">fLevel</span>": <span class="value"><span class="string">"2"</span></span>,</span><br><span class="line">  "<span class="attribute">fName</span>": <span class="value"><span class="string">"11123"</span></span>,</span><br><span class="line">  "<span class="attribute">fDept</span>": <span class="value"><span class="string">"3401"</span></span>,</span><br><span class="line">  "<span class="attribute">fTel</span>": <span class="value"><span class="string">"213"</span></span>,</span><br><span class="line">  "<span class="attribute">fAddr</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">  "<span class="attribute">fRecver</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">  "<span class="attribute">fDeptid</span>": <span class="value"><span class="string">"0000,3401,3334"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="RESP-2">RESP</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="机构更新">机构更新</h3><h4 id="REQ-3">REQ</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"branch.updateByPrimaryKeySelective"</span></span>,</span><br><span class="line">  "<span class="attribute">fId</span>":<span class="value"><span class="string">"0003"</span></span>,</span><br><span class="line">  "<span class="attribute">fValid</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">  "<span class="attribute">fLevel</span>": <span class="value"><span class="string">"2"</span></span>,</span><br><span class="line">  "<span class="attribute">fName</span>": <span class="value"><span class="string">"11123"</span></span>,</span><br><span class="line">  "<span class="attribute">fDept</span>": <span class="value"><span class="string">"3401"</span></span>,</span><br><span class="line">  "<span class="attribute">fTel</span>": <span class="value"><span class="string">"213"</span></span>,</span><br><span class="line">  "<span class="attribute">fAddr</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">  "<span class="attribute">fRecver</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">  "<span class="attribute">fDeptid</span>": <span class="value"><span class="string">"0000,3401,3334"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="RESP-3">RESP</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="机构删除">机构删除</h3><h4 id="REQ-4">REQ</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"branch.deleteByPrimaryKey"</span></span>,</span><br><span class="line">  "<span class="attribute">fId</span>":<span class="value"><span class="string">"9999"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="RESP-4">RESP</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="设备管理">设备管理</h2><h3 id="设备类型">设备类型</h3><h4 id="REQ-5">REQ</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"devtype.selectByPrimaryKey"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="RESP-5">RESP</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">字段</th>
+<th style="text-align:left">别名</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">F_ID</td>
+<td style="text-align:left">fId</td>
+<td style="text-align:left">id 作为设备品牌查询的入参</td>
+</tr>
+<tr>
+<td style="text-align:left">F_NAME</td>
+<td style="text-align:left">fName</td>
+<td style="text-align:left">name 显示</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fId</span>": <span class="value"><span class="string">"ATM"</span></span>, </span><br><span class="line">      "<span class="attribute">fName</span>": <span class="value"><span class="string">"ATM"</span></span>, </span><br><span class="line">      "<span class="attribute">fMenus</span>": <span class="value"><span class="string">"111111110000000000000000000000000000000000000000000000000000"</span></span>,</span><br><span class="line">      "<span class="attribute">fType</span>": <span class="value"><span class="string">"1"</span></span>,</span><br><span class="line">      "<span class="attribute">fMbox</span>": <span class="value"><span class="number">7</span></span>,</span><br><span class="line">      "<span class="attribute">fPad1</span>": <span class="value"><span class="string">""</span></span>,</span><br><span class="line">      "<span class="attribute">fParts</span>": <span class="value"><span class="string">"11111111101111111000100000000000010000000000000000"</span></span><br><span class="line">    </span>&#125;,</span><br><span class="line">    ...</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="设备品牌">设备品牌</h3><h4 id="REQ-6">REQ</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">示例</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">fDevtype</td>
+<td style="text-align:left">ATM</td>
+<td style="text-align:left">设备类型</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"defdev.selectMark"</span></span>,</span><br><span class="line">  "<span class="attribute">fDevtype</span>":<span class="value"><span class="string">"ATM"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="RESP-6">RESP</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">字段</th>
+<th style="text-align:left">别名</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">F_MARK</td>
+<td style="text-align:left">fMark</td>
+<td style="text-align:left">设备品牌</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fMark</span>": <span class="value"><span class="string">"123"</span> //option  id和name都是此值</span><br><span class="line">    </span>&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fMark</span>": <span class="value"><span class="string">"NCR"</span></span><br><span class="line">    </span>&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fMark</span>": <span class="value"><span class="string">"国光"</span></span><br><span class="line">    </span>&#125;</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="设备型号">设备型号</h3><h4 id="REQ-7">REQ</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">示例</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">fDevtype</td>
+<td style="text-align:left">ATM</td>
+<td style="text-align:left">设备类型</td>
+</tr>
+<tr>
+<td style="text-align:left">fMark</td>
+<td style="text-align:left">NCR</td>
+<td style="text-align:left">设备品牌</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"defdev.selectSpc"</span></span>,</span><br><span class="line">  "<span class="attribute">fDevtype</span>":<span class="value"><span class="string">"ATM"</span></span>,</span><br><span class="line">  "<span class="attribute">fMark</span>":<span class="value"><span class="string">"NCR"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="RESP-7">RESP</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">字段</th>
+<th style="text-align:left">别名</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">F_SPC</td>
+<td style="text-align:left">fSpc</td>
+<td style="text-align:left">设备型号</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fSpc</span>": <span class="value"><span class="string">"2030"</span> // 设备型号</span><br><span class="line">    </span>&#125;</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="设备状态">设备状态</h3><h4 id="REQ-8">REQ</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">示例</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">fCatid</td>
+<td style="text-align:left">C1</td>
+<td style="text-align:left">参数类别</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"codes.selectByPrimaryKey"</span></span>,</span><br><span class="line">  "<span class="attribute">fCatid</span>":<span class="value"><span class="string">"C1"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="RESP-8">RESP</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">字段</th>
+<th style="text-align:left">别名</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">F_ID</td>
+<td style="text-align:left">fId</td>
+<td style="text-align:left">id</td>
+</tr>
+<tr>
+<td style="text-align:left">F_NAME</td>
+<td style="text-align:left">fName</td>
+<td style="text-align:left">名称</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fId</span>": <span class="value"><span class="string">"0"</span></span>,</span><br><span class="line">      "<span class="attribute">fName</span>": <span class="value"><span class="string">"正常"</span></span>,</span><br><span class="line">      "<span class="attribute">fCatid</span>": <span class="value"><span class="string">"C1"</span></span>,</span><br><span class="line">      "<span class="attribute">fPad1</span>": <span class="value"><span class="string">""</span></span>,</span><br><span class="line">      "<span class="attribute">fNote</span>": <span class="value"><span class="string">""</span></span><br><span class="line">    </span>&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fId</span>": <span class="value"><span class="string">"2"</span></span>,</span><br><span class="line">      "<span class="attribute">fName</span>": <span class="value"><span class="string">"未启用"</span></span>,</span><br><span class="line">      "<span class="attribute">fCatid</span>": <span class="value"><span class="string">"C1"</span></span>,</span><br><span class="line">      "<span class="attribute">fPad1</span>": <span class="value"><span class="string">""</span></span>,</span><br><span class="line">      "<span class="attribute">fNote</span>": <span class="value"><span class="string">""</span></span><br><span class="line">    </span>&#125;</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="设备查询">设备查询</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fType</td>
+<td>BST</td>
+<td>设备类型</td>
+</tr>
+<tr>
+<td>fMark</td>
+<td>NCR</td>
+<td>设备品牌</td>
+</tr>
+<tr>
+<td>fDept</td>
+<td>0003</td>
+<td>设备所属机构</td>
+</tr>
+<tr>
+<td>fUsestat</td>
+<td>0</td>
+<td>设备状态</td>
+</tr>
+<tr>
+<td>fSpc</td>
+<td>2030</td>
+<td>设备型号</td>
+</tr>
+<tr>
+<td>fAsserts</td>
+<td>000001</td>
+<td>设备编号</td>
+</tr>
+</tbody>
+</table>
+<h4 id="REQ-9">REQ</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"dev.selectByPrimaryKey"</span></span>,</span><br><span class="line">	"<span class="attribute">fType</span>":<span class="value"><span class="string">"BST"</span></span>,</span><br><span class="line">	"<span class="attribute">fMark</span>":<span class="value"><span class="string">"NCR"</span></span>,</span><br><span class="line">	"<span class="attribute">fDept</span>":<span class="value"><span class="string">"0003"</span></span>,</span><br><span class="line">	"<span class="attribute">fUsestat</span>":<span class="value"><span class="string">"0"</span></span>,</span><br><span class="line">	"<span class="attribute">fSpc</span>":<span class="value"><span class="string">"2030"</span></span>,</span><br><span class="line">	"<span class="attribute">fAsserts</span>":<span class="value"><span class="string">"000001"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="RESP-9">RESP</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">字段</th>
+<th style="text-align:left">别名</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">F_ASSERTS</td>
+<td style="text-align:left">fAsserts</td>
+<td style="text-align:left">设备物理编号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_ID</td>
+<td style="text-align:left">fId</td>
+<td style="text-align:left">设备编号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_TERM</td>
+<td style="text-align:left">fTerm</td>
+<td style="text-align:left">柜员编号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_NAME</td>
+<td style="text-align:left">fName</td>
+<td style="text-align:left">设备名称</td>
+</tr>
+<tr>
+<td style="text-align:left">F_INST</td>
+<td style="text-align:left">fInst</td>
+<td style="text-align:left">安装点单位</td>
+</tr>
+<tr>
+<td style="text-align:left">F_INSTADDR</td>
+<td style="text-align:left">fInstaddr</td>
+<td style="text-align:left">安装点详细地址</td>
+</tr>
+<tr>
+<td style="text-align:left">F_DEPT</td>
+<td style="text-align:left">fDept</td>
+<td style="text-align:left">归属机构代码（ 网点）， 见机构信息表(t_branch)</td>
+</tr>
+<tr>
+<td style="text-align:left">F_USESTAT</td>
+<td style="text-align:left">fUsestat</td>
+<td style="text-align:left">使用状态： ‘0’=在用， ‘1’=库存， ‘2’=未启用， ‘3’=闲置， ‘4’=报废（ 见综合代码表(t_codes)C1）</td>
+</tr>
+<tr>
+<td style="text-align:left">F_IP</td>
+<td style="text-align:left">fIp</td>
+<td style="text-align:left">设备 IP 地址[/网关]。 如“ 192.168.3.15/1”</td>
+</tr>
+<tr>
+<td style="text-align:left">F_PORT</td>
+<td style="text-align:left">fPort</td>
+<td style="text-align:left">Agent 服务端口号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_MAC</td>
+<td style="text-align:left">fMac</td>
+<td style="text-align:left">网卡 MAC 地址</td>
+</tr>
+<tr>
+<td style="text-align:left">F_STYLE</td>
+<td style="text-align:left">fStyle</td>
+<td style="text-align:left">放置形式： ‘0’=在行， ‘1’=离行， ……。 见综合代码表(t_codes)（ C6）</td>
+</tr>
+<tr>
+<td style="text-align:left">F_INSTSTYLE</td>
+<td style="text-align:left">fInststyle</td>
+<td style="text-align:left">安装方式： ‘1’=大堂， ‘2’=穿墙， ‘3’=壁挂（ 见综合代码表(t_codes)C5）</td>
+</tr>
+<tr>
+<td style="text-align:left">F_AREA</td>
+<td style="text-align:left">fArea</td>
+<td style="text-align:left">安装区域： 见综合代码表(t_codes)（ C3）： 城区/县乡</td>
+</tr>
+<tr>
+<td style="text-align:left">F_FUNCAREA</td>
+<td style="text-align:left">fFuncarea</td>
+<td style="text-align:left">功能区： 见综合代码表(t_codes)（ CA）</td>
+</tr>
+<tr>
+<td style="text-align:left">F_TYPE</td>
+<td style="text-align:left">fType</td>
+<td style="text-align:left">设备类型： ATM/BST/DCT…， 取自 t_defdev 表</td>
+</tr>
+<tr>
+<td style="text-align:left">F_MARK</td>
+<td style="text-align:left">fMark</td>
+<td style="text-align:left">设备品牌， 如“ NCR”、“ DIEBOLD” 等， 取自 t_defdev 表</td>
+</tr>
+<tr>
+<td style="text-align:left">F_SPC</td>
+<td style="text-align:left">fSpc</td>
+<td style="text-align:left">设备型号， 取自 t_defdev 表</td>
+</tr>
+<tr>
+<td style="text-align:left">F_UPS</td>
+<td style="text-align:left">fUps</td>
+<td style="text-align:left">UPS 类型： ‘0’-未安装（ 见综合代码表(t_codes)C2）</td>
+</tr>
+<tr>
+<td style="text-align:left">F_PC</td>
+<td style="text-align:left">fPc</td>
+<td style="text-align:left">操作系统（ 见综合代码表(t_codes)OS）</td>
+</tr>
+<tr>
+<td style="text-align:left">F_BOX</td>
+<td style="text-align:left">fBox</td>
+<td style="text-align:left">存款钞箱个数</td>
+</tr>
+<tr>
+<td style="text-align:left">F_MBOX</td>
+<td style="text-align:left">fMbox</td>
+<td style="text-align:left">取款钞箱个数</td>
+</tr>
+<tr>
+<td style="text-align:left">F_MONEYDEV</td>
+<td style="text-align:left">fMoneydev</td>
+<td style="text-align:left">是否为现金类设备： ‘0’=否， ‘1’=是</td>
+</tr>
+<tr>
+<td style="text-align:left">F_FACID</td>
+<td style="text-align:left">fFacid</td>
+<td style="text-align:left">设备厂商代码， 由程序根据设备型号设备型号表(t_defdev)得到</td>
+</tr>
+<tr>
+<td style="text-align:left">F_ISPID</td>
+<td style="text-align:left">fIspid</td>
+<td style="text-align:left">设备维护商代码， 见设备服务商表(t_devisp)</td>
+</tr>
+<tr>
+<td style="text-align:left">F_DTOPEN</td>
+<td style="text-align:left">fDtopen</td>
+<td style="text-align:left">投产日期</td>
+</tr>
+<tr>
+<td style="text-align:left">F_DTBX1</td>
+<td style="text-align:left">fDtbx1</td>
+<td style="text-align:left">起保日期</td>
+</tr>
+<tr>
+<td style="text-align:left">F_DTBX2</td>
+<td style="text-align:left">fDtbx2</td>
+<td style="text-align:left">终保日期</td>
+</tr>
+<tr>
+<td style="text-align:left">F_WORK1</td>
+<td style="text-align:left">fWork1</td>
+<td style="text-align:left">起始营业时间， hhmm 格式</td>
+</tr>
+<tr>
+<td style="text-align:left">F_WORK2</td>
+<td style="text-align:left">fWork2</td>
+<td style="text-align:left">结束营业时间， 同上</td>
+</tr>
+<tr>
+<td style="text-align:left">F_WORKDX</td>
+<td style="text-align:left">fWorkdx</td>
+<td style="text-align:left">每日营业时间， 本域由程序根据上两个字段自动计算</td>
+</tr>
+<tr>
+<td style="text-align:left">F_SEARCH</td>
+<td style="text-align:left">fSearch</td>
+<td style="text-align:left">定位信息</td>
+</tr>
+<tr>
+<td style="text-align:left">F_CURVER</td>
+<td style="text-align:left">fCurver</td>
+<td style="text-align:left">当前软件版本号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_CODE</td>
+<td style="text-align:left">fCode</td>
+<td style="text-align:left">设备序列号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_LASTTX</td>
+<td style="text-align:left">fLasttx</td>
+<td style="text-align:left">最后收到报文的时间</td>
+</tr>
+<tr>
+<td style="text-align:left">F_LASTST</td>
+<td style="text-align:left">fLastst</td>
+<td style="text-align:left">最后收到状态报文的时间</td>
+</tr>
+<tr>
+<td style="text-align:left">F_LASTTS</td>
+<td style="text-align:left">fLastts</td>
+<td style="text-align:left">最后收到交易报文的时间</td>
+</tr>
+<tr>
+<td style="text-align:left">F_LOGVER</td>
+<td style="text-align:left">fLogver</td>
+<td style="text-align:left">√ 当前日志变化版本号</td>
+</tr>
+<tr>
+<td style="text-align:left">F_FLAG1</td>
+<td style="text-align:left">fFlag1</td>
+<td style="text-align:left">（ 备用）</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "rspCode": "00",</span><br><span class="line">  "rspMsg": "交易成功",</span><br><span class="line">  "listInfo": [</span><br><span class="line">    &#123;</span><br><span class="line">      "fId": "000001",</span><br><span class="line">      "fAdmht": "",</span><br><span class="line">      "fMac": "",</span><br><span class="line">      "fDtarriv": "",</span><br><span class="line">      "fDtimax": "",</span><br><span class="line">      "fBox": 0,</span><br><span class="line">      "fBuyht": "",</span><br><span class="line">      "fIp": "192.168.1.120",</span><br><span class="line">      ...</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id=""> </h4></span>
         
       
     </div>
