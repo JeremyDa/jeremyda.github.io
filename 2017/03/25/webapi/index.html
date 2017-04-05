@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://jeremyda.github.io/2017/03/25/webapi/index.html">
 <meta property="og:site_name" content="Jeremy's blog!">
 <meta property="og:description" content="web api">
-<meta property="og:updated_time" content="2017-04-05T06:26:44.000Z">
+<meta property="og:updated_time" content="2017-04-05T07:37:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web api">
 <meta name="twitter:description" content="web api">
@@ -315,12 +315,42 @@
 <tr>
 <td>fDevtype</td>
 <td>char8</td>
-<td>设备类型，对应t_devtype.F_ID</td>
+<td>设备类型，对应t_devtype.F_ID(选填)</td>
 </tr>
 </tbody>
 </table>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>" : <span class="value"><span class="string">"defdev.selectDefdevByType"</span></span>,</span><br><span class="line">  "<span class="attribute">fDevtype</span>" : <span class="value"><span class="string">"ATM"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="RESP-5">RESP</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fMark</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">      "<span class="attribute">fDefval</span>": <span class="value"><span class="string">"1"</span></span>,</span><br><span class="line">      "<span class="attribute">fDevtype</span>": <span class="value"><span class="string">"ATM"</span></span>,</span><br><span class="line">      "<span class="attribute">fFacid</span>": <span class="value"><span class="string">"0002"</span></span>,</span><br><span class="line">      "<span class="attribute">fSpc</span>": <span class="value"><span class="string">"123"</span></span><br><span class="line">    </span>&#125;,</span><br><span class="line">    ...</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="RESP-5">RESP</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fDevtype</td>
+<td>设备类型</td>
+</tr>
+<tr>
+<td>fMark</td>
+<td>设备品牌</td>
+</tr>
+<tr>
+<td>fSpc</td>
+<td>设备型号</td>
+</tr>
+<tr>
+<td>fDefval</td>
+<td>参数</td>
+</tr>
+<tr>
+<td>fFacname</td>
+<td>厂商名称</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fMark</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">      "<span class="attribute">fFacname</span>": <span class="value"><span class="string">"NCR"</span></span>,</span><br><span class="line">      "<span class="attribute">fDefval</span>": <span class="value"><span class="string">"1"</span></span>,</span><br><span class="line">      "<span class="attribute">fDevtype</span>": <span class="value"><span class="string">"ATM"</span></span>,</span><br><span class="line">      "<span class="attribute">fFacid</span>": <span class="value"><span class="string">"0002"</span></span>,</span><br><span class="line">      "<span class="attribute">fSpc</span>": <span class="value"><span class="string">"123"</span></span><br><span class="line">    </span>&#125;,</span><br><span class="line">    ...</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="品牌型号新增">品牌型号新增</h3><h4 id="REQ-6">REQ</h4><table>
 <thead>
 <tr>
