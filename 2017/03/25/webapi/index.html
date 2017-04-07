@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://jeremyda.github.io/2017/03/25/webapi/index.html">
 <meta property="og:site_name" content="Jeremy's blog!">
 <meta property="og:description" content="web api">
-<meta property="og:updated_time" content="2017-04-06T06:20:17.000Z">
+<meta property="og:updated_time" content="2017-04-07T00:18:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web api">
 <meta name="twitter:description" content="web api">
@@ -666,15 +666,27 @@
 <tbody>
 <tr>
 <td>fId</td>
-<td>机构ID</td>
+<td>机构代码</td>
 </tr>
 <tr>
 <td>fName</td>
 <td>机构名称</td>
 </tr>
+<tr>
+<td>fDept</td>
+<td>上级机构代码， 省行为’####’</td>
+</tr>
+<tr>
+<td>fDeptid</td>
+<td>上级机构代码链表， 包括本身， 以方便查询统计。 格式为： 省行,市行,支行,网点， 中间以逗号’,’分隔</td>
+</tr>
+<tr>
+<td>fLevel</td>
+<td>级别： ‘1’=网点， ‘2’=支行， ‘3’=市行， ‘4’=省行</td>
+</tr>
 </tbody>
 </table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fId</span>": <span class="value"><span class="string">"3334"</span></span>,</span><br><span class="line">      "<span class="attribute">fLevel</span>": <span class="value"><span class="string">"2"</span></span>,</span><br><span class="line">      "<span class="attribute">fName</span>": <span class="value"><span class="string">"11123(3334)"</span></span>,</span><br><span class="line">      "<span class="attribute">fDept</span>": <span class="value"><span class="string">"3401"</span></span>,</span><br><span class="line">      "<span class="attribute">fDeptid</span>": <span class="value"><span class="string">"0000,3401,3334"</span></span><br><span class="line">    </span>&#125;,</span><br><span class="line">    ...</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">  "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">  "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">fId</span>": <span class="value"><span class="string">"3401"</span></span>,</span><br><span class="line">      "<span class="attribute">fLevel</span>": <span class="value"><span class="string">"3"</span></span>,</span><br><span class="line">      "<span class="attribute">fName</span>": <span class="value"><span class="string">"合肥(3401)"</span></span>,</span><br><span class="line">      "<span class="attribute">fDept</span>": <span class="value"><span class="string">"0000"</span></span>,</span><br><span class="line">      "<span class="attribute">fDeptid</span>": <span class="value"><span class="string">"0000,3401"</span></span><br><span class="line">    </span>&#125;</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="用户角色查询">用户角色查询</h3><h4 id="REQ-22">REQ</h4><blockquote>
 <p>用于新增/更新用户，用户角色下拉选择</p>
 </blockquote>
