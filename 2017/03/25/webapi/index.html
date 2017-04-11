@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://jeremyda.github.io/2017/03/25/webapi/index.html">
 <meta property="og:site_name" content="Jeremy's blog!">
 <meta property="og:description" content="web api">
-<meta property="og:updated_time" content="2017-04-11T06:12:10.000Z">
+<meta property="og:updated_time" content="2017-04-11T15:37:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web api">
 <meta name="twitter:description" content="web api">
@@ -278,6 +278,11 @@
 <td style="text-align:left">fState</td>
 <td style="text-align:left">varchar1</td>
 <td style="text-align:left">状态：1－签到，0－签退</td>
+</tr>
+<tr>
+<td style="text-align:left">fStatename</td>
+<td style="text-align:left">varchar</td>
+<td style="text-align:left">状态名称</td>
 </tr>
 </tbody>
 </table>
@@ -2606,7 +2611,53 @@
 <h3 id="获取设备列表">获取设备列表</h3><h4 id="REQ-72">REQ</h4><blockquote>
 <p>fId参数可选</p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>" : <span class="value"><span class="string">"dev.selectDevListWithState"</span></span>,</span><br><span class="line">  "<span class="attribute">fId</span>" : <span class="value"><span class="string">"34015000"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fId</td>
+<td>varchar</td>
+<td>*设备编号</td>
+</tr>
+<tr>
+<td>fDeptid</td>
+<td>varchar</td>
+<td>*上级机构代码链表， 包括本身， 以方便查询统计。 格式为： 省行,市行,支行,网点， 中间以逗号’,’分隔</td>
+</tr>
+<tr>
+<td>fType</td>
+<td>varchar</td>
+<td>*设备类型： ATM/BST/DCT…， 取自 t_defdev 表</td>
+</tr>
+<tr>
+<td>fMark</td>
+<td>varchar</td>
+<td>*设备品牌， 如“ NCR”、“ DIEBOLD” 等， 取自 t_defdev 表</td>
+</tr>
+<tr>
+<td>fSpc</td>
+<td>varchar</td>
+<td>*设备型号， 取自 t_defdev 表</td>
+</tr>
+<tr>
+<td>fState</td>
+<td>varchar</td>
+<td>*状态列表，逗号分隔，如1,5,6</td>
+</tr>
+<tr>
+<td>toList</td>
+<td>varchar</td>
+<td>*入参列表中需要转化为List的参数名称列表，逗号分隔</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>" : <span class="value"><span class="string">"dev.selectDevListWithState"</span></span>,</span><br><span class="line">  "<span class="attribute">fState</span>" : <span class="value"><span class="string">"1,5,6"</span></span>,</span><br><span class="line">  "<span class="attribute">toList</span>" : <span class="value"><span class="string">"fState"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="RESP-72">RESP</h4><table>
 <thead>
 <tr>
