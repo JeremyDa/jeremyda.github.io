@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://jeremyda.github.io/2017/03/25/webapi/index.html">
 <meta property="og:site_name" content="Jeremy's blog!">
 <meta property="og:description" content="web api">
-<meta property="og:updated_time" content="2017-04-21T03:04:24.000Z">
+<meta property="og:updated_time" content="2017-04-21T07:30:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web api">
 <meta name="twitter:description" content="web api">
@@ -1823,7 +1823,23 @@
 <h2 id="菜单管理">菜单管理</h2><h3 id="菜单查询">菜单查询</h3><blockquote>
 <p>菜单数据查询，用于table中管理</p>
 </blockquote>
-<h4 id="REQ-53">REQ</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>" : <span class="value"><span class="string">"menuauth.selectByPrimaryKey"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="REQ-53">REQ</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fPid</td>
+<td>varchar</td>
+<td>上级菜单id，顶级为-1</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>" : <span class="value"><span class="string">"menuauth.selectByPrimaryKey"</span></span>,</span><br><span class="line">  "<span class="attribute">fPid</span>" : <span class="value"><span class="string">"-1"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="RESP-53">RESP</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &#123;</span><br><span class="line">  "rspCode": "00",</span><br><span class="line">  "rspMsg": "交易成功",</span><br><span class="line">  "listInfo": [</span><br><span class="line">    &#123;</span><br><span class="line">      "fSort": 1,</span><br><span class="line">      "fType": "3",</span><br><span class="line">      "fUrl": "monitor",</span><br><span class="line">      "menuId": 1,</span><br><span class="line">      "menuName": "设备监控",</span><br><span class="line">      "parentId": -1,</span><br><span class="line">      "activeFlag": "0"</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="菜单新增">菜单新增</h3><h4 id="REQ-54">REQ</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"menuauth.insertSelective"</span></span>,</span><br><span class="line">  "<span class="attribute">fId</span>":<span class="value"><span class="string">"9999"</span></span>,</span><br><span class="line">  "<span class="attribute">fName</span>":<span class="value"><span class="string">"测试name"</span></span>,</span><br><span class="line">  "<span class="attribute">fSort</span>":<span class="value"><span class="number">1</span></span>,</span><br><span class="line">  "<span class="attribute">fType</span>":<span class="value"><span class="string">"3"</span></span>,</span><br><span class="line">  "<span class="attribute">fUrl</span>":<span class="value"><span class="string">"testurl"</span></span>,</span><br><span class="line">  "<span class="attribute">parentId</span>":<span class="value">-<span class="number">1</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
