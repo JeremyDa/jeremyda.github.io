@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://jeremyda.github.io/2017/03/25/webapi/index.html">
 <meta property="og:site_name" content="Jeremy's blog!">
 <meta property="og:description" content="web api">
-<meta property="og:updated_time" content="2017-11-10T01:00:10.000Z">
+<meta property="og:updated_time" content="2017-11-10T07:13:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web api">
 <meta name="twitter:description" content="web api">
@@ -643,10 +643,28 @@
 </thead>
 <tbody>
 <tr>
+<td style="text-align:left">fDateStart</td>
 <td style="text-align:left"></td>
+<td style="text-align:left">开始日期</td>
+</tr>
+<tr>
+<td style="text-align:left">fDateEnd</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">结束日期</td>
+</tr>
+<tr>
+<td style="text-align:left">deptid</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">机构id链表</td>
+</tr>
+<tr>
+<td style="text-align:left">fDevid</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">设备id</td>
 </tr>
 </tbody>
 </table>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  tradeCode : spcact.selectRetainCardRecord</span><br><span class="line">  fDateStart : 20170101</span><br><span class="line">  fDateEnd : 20171201</span><br><span class="line">  deptid : 0000,1100,1101</span><br><span class="line">  fDevid : FYC</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="RESP-3">RESP</h3><table>
 <thead>
 <tr>
@@ -657,10 +675,48 @@
 </thead>
 <tbody>
 <tr>
+<td style="text-align:left">fDate</td>
 <td style="text-align:left"></td>
+<td style="text-align:left">日期</td>
+</tr>
+<tr>
+<td style="text-align:left">fTime</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">时间</td>
+</tr>
+<tr>
+<td style="text-align:left">fFhname</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">分行名称</td>
+</tr>
+<tr>
+<td style="text-align:left">fZhname</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">支行名称</td>
+</tr>
+<tr>
+<td style="text-align:left">fWdname</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">网点名称</td>
+</tr>
+<tr>
+<td style="text-align:left">fAcno</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">卡号</td>
+</tr>
+<tr>
+<td style="text-align:left">fInstaddr</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">安装地址</td>
+</tr>
+<tr>
+<td style="text-align:left">fDevid</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">设备id</td>
 </tr>
 </tbody>
 </table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">        &#123;</span><br><span class="line">            "<span class="attribute">fZhname</span>": <span class="value"><span class="string">"一二三四五六"</span></span>,</span><br><span class="line">            "<span class="attribute">fResult</span>": <span class="value"><span class="string">"1"</span></span>,</span><br><span class="line">            "<span class="attribute">fWdid</span>": <span class="value"><span class="string">"1101"</span></span>,</span><br><span class="line">            "<span class="attribute">fAcno</span>": <span class="value"><span class="string">"9559912345678901"</span></span>,</span><br><span class="line">            "<span class="attribute">fInstaddr</span>": <span class="value"><span class="string">"江苏常州"</span></span>,</span><br><span class="line">            "<span class="attribute">fZhid</span>": <span class="value"><span class="string">"1100"</span></span>,</span><br><span class="line">            "<span class="attribute">fWdname</span>": <span class="value"><span class="string">"XX网点"</span></span>,</span><br><span class="line">            "<span class="attribute">fHostls</span>": <span class="value"><span class="literal">null</span></span>,</span><br><span class="line">            "<span class="attribute">fTime</span>": <span class="value"><span class="string">"10:01"</span></span>,</span><br><span class="line">            "<span class="attribute">fResultname</span>": <span class="value"><span class="literal">null</span></span>,</span><br><span class="line">            "<span class="attribute">fDate</span>": <span class="value"><span class="string">"2017-07-24"</span></span>,</span><br><span class="line">            "<span class="attribute">fFhname</span>": <span class="value"><span class="string">"一二三四五六"</span></span>,</span><br><span class="line">            "<span class="attribute">fDevid</span>": <span class="value"><span class="string">"FYC"</span></span><br><span class="line">        </span>&#125;</span><br><span class="line">    ]</span>,</span><br><span class="line">    "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">    "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">    "<span class="attribute">serial</span>": <span class="value"><span class="string">"1c632e30-6fe1-4af1-b87f-bd395524993e"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="设备正常运行率统计（单机）">设备正常运行率统计（单机）</h2><h3 id="REQ-4">REQ</h3><table>
 <thead>
 <tr>
