@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://jeremyda.github.io/2017/11/20/hefeicard/index.html">
 <meta property="og:site_name" content="Jeremy's blog!">
 <meta property="og:description" content="web api">
-<meta property="og:updated_time" content="2017-11-20T05:38:45.000Z">
+<meta property="og:updated_time" content="2017-11-20T08:07:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hefeicard api">
 <meta name="twitter:description" content="web api">
@@ -353,6 +353,256 @@
 </tbody>
 </table>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">    "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="现金结账报表">现金结账报表</h2><h3 id="REQ-3">REQ</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">check_date_start</td>
+<td style="text-align:left">结账日期开始</td>
+</tr>
+<tr>
+<td style="text-align:left">check_date_end</td>
+<td style="text-align:left">结账日期结束</td>
+</tr>
+<tr>
+<td style="text-align:left">deviceNo</td>
+<td style="text-align:left">设备号</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  tradeCode: transcashtotal.selectReport</span><br><span class="line">  check_date_start : 2017-01-01</span><br><span class="line">  check_date_end : 2017-10-11</span><br><span class="line">  deviceNo : 1001</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="RESP-3">RESP</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">deviceNo</td>
+<td style="text-align:left">设备号</td>
+</tr>
+<tr>
+<td style="text-align:left">check_date</td>
+<td style="text-align:left">结账时间</td>
+</tr>
+<tr>
+<td style="text-align:left">success_times</td>
+<td style="text-align:left">成功笔数</td>
+</tr>
+<tr>
+<td style="text-align:left">success_money</td>
+<td style="text-align:left">成功金额</td>
+</tr>
+<tr>
+<td style="text-align:left">error_times</td>
+<td style="text-align:left">失败笔数</td>
+</tr>
+<tr>
+<td style="text-align:left">error_money</td>
+<td style="text-align:left">失败金额</td>
+</tr>
+<tr>
+<td style="text-align:left">notsure_times</td>
+<td style="text-align:left">不确定次数</td>
+</tr>
+<tr>
+<td style="text-align:left">notsure_money</td>
+<td style="text-align:left">不确定金额</td>
+</tr>
+<tr>
+<td style="text-align:left">total_times</td>
+<td style="text-align:left">总笔数</td>
+</tr>
+<tr>
+<td style="text-align:left">total_money</td>
+<td style="text-align:left">总金额</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">    "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="交易明细报表">交易明细报表</h2><h3 id="REQ-4">REQ</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">transdate_start</td>
+<td style="text-align:left">交易日期开始</td>
+</tr>
+<tr>
+<td style="text-align:left">transdate_end</td>
+<td style="text-align:left">交易日期结束</td>
+</tr>
+<tr>
+<td style="text-align:left">eccpan</td>
+<td style="text-align:left">卡号</td>
+</tr>
+<tr>
+<td style="text-align:left">cardtype</td>
+<td style="text-align:left">卡类型：20-PBOC卡，90-CPU卡</td>
+</tr>
+<tr>
+<td style="text-align:left">transtype</td>
+<td style="text-align:left">业务类型：cz-充值，sk-售卡，kcq-快充券</td>
+</tr>
+<tr>
+<td style="text-align:left">reserved</td>
+<td style="text-align:left">支付渠道</td>
+</tr>
+<tr>
+<td style="text-align:left">txnstatus</td>
+<td style="text-align:left">订单状态</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  tradeCode: transdetail.selectTrans</span><br><span class="line">  transdate_start : 20170805</span><br><span class="line">  transdate_end : 20170805</span><br><span class="line">  eccpan: 9210000100006522027</span><br><span class="line">  cardtype : 20</span><br><span class="line">  transtype : cz</span><br><span class="line">  reserved: 00</span><br><span class="line">  txnstatus: 00</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="RESP-4">RESP</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">txnseq</td>
+<td style="text-align:left">流水号</td>
+</tr>
+<tr>
+<td style="text-align:left">eccpan</td>
+<td style="text-align:left">卡号</td>
+</tr>
+<tr>
+<td style="text-align:left">cardtype</td>
+<td style="text-align:left">卡类型</td>
+</tr>
+<tr>
+<td style="text-align:left">transtype</td>
+<td style="text-align:left">业务类型</td>
+</tr>
+<tr>
+<td style="text-align:left">transdate</td>
+<td style="text-align:left">交易日期</td>
+</tr>
+<tr>
+<td style="text-align:left">transtime</td>
+<td style="text-align:left">交易时间</td>
+</tr>
+<tr>
+<td style="text-align:left">reserved_name</td>
+<td style="text-align:left">支付渠道</td>
+</tr>
+<tr>
+<td style="text-align:left">txnamt</td>
+<td style="text-align:left">交易金额</td>
+</tr>
+<tr>
+<td style="text-align:left">txnstatus</td>
+<td style="text-align:left">状态</td>
+</tr>
+<tr>
+<td style="text-align:left">txnstatus_name</td>
+<td style="text-align:left">状态</td>
+</tr>
+<tr>
+<td style="text-align:left">merchId</td>
+<td style="text-align:left">商户号</td>
+</tr>
+<tr>
+<td style="text-align:left">shopid</td>
+<td style="text-align:left">门店</td>
+</tr>
+<tr>
+<td style="text-align:left">deviceNo</td>
+<td style="text-align:left">终端</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">    "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总账报表">总账报表</h2><h3 id="REQ-5">REQ</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">transdate_start</td>
+<td style="text-align:left">交易日期开始</td>
+</tr>
+<tr>
+<td style="text-align:left">transdate_end</td>
+<td style="text-align:left">交易日期结束</td>
+</tr>
+<tr>
+<td style="text-align:left">eccpan</td>
+<td style="text-align:left">卡号</td>
+</tr>
+<tr>
+<td style="text-align:left">cardtype</td>
+<td style="text-align:left">卡类型：20-PBOC卡，90-CPU卡</td>
+</tr>
+<tr>
+<td style="text-align:left">transtype</td>
+<td style="text-align:left">业务类型：cz-充值，sk-售卡，kcq-快充券</td>
+</tr>
+<tr>
+<td style="text-align:left">reserved</td>
+<td style="text-align:left">支付渠道</td>
+</tr>
+<tr>
+<td style="text-align:left">txnstatus</td>
+<td style="text-align:left">订单状态</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  tradeCode: transdetail.selectReport</span><br><span class="line">  transdate_start : 20170805</span><br><span class="line">  transdate_end : 20170805</span><br><span class="line">  eccpan: 9210000100006522027</span><br><span class="line">  cardtype : 20</span><br><span class="line">  transtype : cz</span><br><span class="line">  reserved: 00</span><br><span class="line">  txnstatus: 00</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="RESP-5">RESP</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">cardtype</td>
+<td style="text-align:left">卡类型</td>
+</tr>
+<tr>
+<td style="text-align:left">transtype</td>
+<td style="text-align:left">业务类型</td>
+</tr>
+<tr>
+<td style="text-align:left">reserved_name</td>
+<td style="text-align:left">支付渠道</td>
+</tr>
+<tr>
+<td style="text-align:left">txnstatus_name</td>
+<td style="text-align:left">状态</td>
+</tr>
+<tr>
+<td style="text-align:left">sumtimes</td>
+<td style="text-align:left">笔数</td>
+</tr>
+<tr>
+<td style="text-align:left">sumamt</td>
+<td style="text-align:left">金额</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">    "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -482,7 +732,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#扫码支付总账查询"><span class="nav-number">1.</span> <span class="nav-text">扫码支付总账查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REQ"><span class="nav-number">1.1.</span> <span class="nav-text">REQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESP"><span class="nav-number">1.2.</span> <span class="nav-text">RESP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扫码支付错账明细查询"><span class="nav-number">2.</span> <span class="nav-text">扫码支付错账明细查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REQ-1"><span class="nav-number">2.1.</span> <span class="nav-text">REQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESP-1"><span class="nav-number">2.2.</span> <span class="nav-text">RESP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#差错明细平账"><span class="nav-number">3.</span> <span class="nav-text">差错明细平账</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REQ-2"><span class="nav-number">3.1.</span> <span class="nav-text">REQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESP-2"><span class="nav-number">3.2.</span> <span class="nav-text">RESP</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#扫码支付总账查询"><span class="nav-number">1.</span> <span class="nav-text">扫码支付总账查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REQ"><span class="nav-number">1.1.</span> <span class="nav-text">REQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESP"><span class="nav-number">1.2.</span> <span class="nav-text">RESP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扫码支付错账明细查询"><span class="nav-number">2.</span> <span class="nav-text">扫码支付错账明细查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REQ-1"><span class="nav-number">2.1.</span> <span class="nav-text">REQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESP-1"><span class="nav-number">2.2.</span> <span class="nav-text">RESP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#差错明细平账"><span class="nav-number">3.</span> <span class="nav-text">差错明细平账</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REQ-2"><span class="nav-number">3.1.</span> <span class="nav-text">REQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESP-2"><span class="nav-number">3.2.</span> <span class="nav-text">RESP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现金结账报表"><span class="nav-number">4.</span> <span class="nav-text">现金结账报表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REQ-3"><span class="nav-number">4.1.</span> <span class="nav-text">REQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESP-3"><span class="nav-number">4.2.</span> <span class="nav-text">RESP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交易明细报表"><span class="nav-number">5.</span> <span class="nav-text">交易明细报表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REQ-4"><span class="nav-number">5.1.</span> <span class="nav-text">REQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESP-4"><span class="nav-number">5.2.</span> <span class="nav-text">RESP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总账报表"><span class="nav-number">6.</span> <span class="nav-text">总账报表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REQ-5"><span class="nav-number">6.1.</span> <span class="nav-text">REQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESP-5"><span class="nav-number">6.2.</span> <span class="nav-text">RESP</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
