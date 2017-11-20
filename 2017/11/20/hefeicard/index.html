@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Maven,Spring Boot," />
+  <meta name="keywords" content="API," />
 
 
 
@@ -37,54 +37,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="MavenApache Maven：是一个软件项目管理和构建工具。基于项目对象模型（POM）的概念，Maven可以通过中央信息库管理项目的构建，报告和文档。
-
-下载 ：
-https://maven.apache.org/download.cgi
-apache-maven-3.3.9-bin.zip并解压缩；
-
-
-
-安装 ：
-确保JAVA_HOME为jdk1.7；
-apache-maven-3.3.">
+<meta name="description" content="web api">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Build Spring Boot with Maven">
-<meta property="og:url" content="http://jeremyda.github.io/2017/01/17/maven/index.html">
+<meta property="og:title" content="hefeicard api">
+<meta property="og:url" content="http://jeremyda.github.io/2017/11/20/hefeicard/index.html">
 <meta property="og:site_name" content="Jeremy's blog!">
-<meta property="og:description" content="MavenApache Maven：是一个软件项目管理和构建工具。基于项目对象模型（POM）的概念，Maven可以通过中央信息库管理项目的构建，报告和文档。
-
-下载 ：
-https://maven.apache.org/download.cgi
-apache-maven-3.3.9-bin.zip并解压缩；
-
-
-
-安装 ：
-确保JAVA_HOME为jdk1.7；
-apache-maven-3.3.">
-<meta property="og:image" content="http://jeremyda.github.io/images/Q0.png">
-<meta property="og:image" content="http://jeremyda.github.io/images/EF1D0E31-03FA-4912-91EC-3A08278E1A83.png">
-<meta property="og:image" content="http://jeremyda.github.io/images/1.gif">
-<meta property="og:image" content="http://jeremyda.github.io/images/3.gif">
-<meta property="og:image" content="http://jeremyda.github.io/images/Q1.png">
-<meta property="og:image" content="http://jeremyda.github.io/images/F5920264-3EF4-4A07-8487-5FCAA3F2AB80.png">
-<meta property="og:image" content="http://jeremyda.github.io/images/6.gif">
-<meta property="og:image" content="http://jeremyda.github.io/images/5.gif">
-<meta property="og:updated_time" content="2017-03-25T02:49:52.000Z">
+<meta property="og:description" content="web api">
+<meta property="og:updated_time" content="2017-11-20T05:27:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Build Spring Boot with Maven">
-<meta name="twitter:description" content="MavenApache Maven：是一个软件项目管理和构建工具。基于项目对象模型（POM）的概念，Maven可以通过中央信息库管理项目的构建，报告和文档。
-
-下载 ：
-https://maven.apache.org/download.cgi
-apache-maven-3.3.9-bin.zip并解压缩；
-
-
-
-安装 ：
-确保JAVA_HOME为jdk1.7；
-apache-maven-3.3.">
+<meta name="twitter:title" content="hefeicard api">
+<meta name="twitter:description" content="web api">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -94,7 +56,7 @@ apache-maven-3.3.">
   };
 </script>
 
-  <title> Build Spring Boot with Maven | Jeremy's blog! </title>
+  <title> hefeicard api | Jeremy's blog! </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -193,7 +155,7 @@ apache-maven-3.3.">
           
           
             
-              Build Spring Boot with Maven
+              hefeicard api
             
           
         </h1>
@@ -202,8 +164,8 @@ apache-maven-3.3.">
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2017-01-17T23:49:15+08:00" content="2017-01-17">
-            2017-01-17
+          <time itemprop="dateCreated" datetime="2017-11-20T10:49:15+08:00" content="2017-11-20">
+            2017-11-20
           </time>
         </span>
 
@@ -212,8 +174,8 @@ apache-maven-3.3.">
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Java/" itemprop="url" rel="index">
-                  <span itemprop="name">Java</span>
+                <a href="/categories/Web/" itemprop="url" rel="index">
+                  <span itemprop="name">Web</span>
                 </a>
               </span>
 
@@ -228,8 +190,8 @@ apache-maven-3.3.">
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2017/01/17/maven/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/17/maven/" itemprop="commentsCount"></span>
+              <a href="/2017/11/20/hefeicard/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2017/11/20/hefeicard/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -243,77 +205,155 @@ apache-maven-3.3.">
       
 
       
-        <span itemprop="articleBody"><a id="more"></a>
-<h1 id="Maven">Maven</h1><p><strong>Apache Maven</strong>：是一个软件项目管理和构建工具。基于项目对象模型（POM）的概念，Maven可以通过中央信息库管理项目的构建，报告和文档。</p>
-<ul>
-<li><strong>下载</strong> ：<ul>
-<li><a href="https://maven.apache.org/download.cgi" target="_blank" rel="external">https://maven.apache.org/download.cgi</a></li>
-<li>apache-maven-3.3.9-bin.zip并解压缩；</li>
-</ul>
-<hr>
-</li>
-<li><strong>安装</strong> ：<ul>
-<li>确保JAVA_HOME为jdk1.7；</li>
-<li>apache-maven-3.3.9/bin的绝对路径添加到path环境变量；</li>
-<li>cmd窗口中执行mvn -v，如果显示maven版本，表示安装成功；</li>
-<li><img src="/images/Q0.png" alt=""></li>
-</ul>
-<hr>
-</li>
-<li><p><strong>IDE集成Maven</strong> ：</p>
-<ul>
-<li>NetBeans： 从 6.7开始完全支持Maven, 从7.0+开始支持Maven 3；</li>
-<li><p>Eclipse：</p>
-<ul>
-<li>Help-&gt;Install new software-&gt;work with中填入<br><a href="http://download.eclipse.org/technology/m2e/releases" target="_blank" rel="external">http://download.eclipse.org/technology/m2e/releases</a>  并回车；如下图：</li>
-<li><img src="/images/EF1D0E31-03FA-4912-91EC-3A08278E1A83.png" alt=""></li>
-</ul>
-<hr>
-<ul>
-<li><p><img src="/images/1.gif" alt=""></p>
-</li>
-<li><p>查询到“Maven Integration for Eclipse”后☑️</p>
-</li>
-<li>页面最后一行“Contact all update sites during install to find require software”不选，加快安装速度；</li>
-<li>next-&gt;accept license-&gt;finish，提示重启Eclipse-&gt;OK</li>
-<li>Preference-&gt;Maven-&gt;installation,添加Maven_Home的路径，并起个名称，如下图：</li>
-<li><p><img src="/images/3.gif" alt=""></p>
-</li>
-<li><p>M2Eclipse插件主页是<a href="http://www.eclipse.org/m2e/index.html" target="_blank" rel="external">http://www.eclipse.org/m2e/index.html</a> ，可以查询相对应的版本号；</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li><strong>Maven主要功能</strong>：<ul>
-<li>帮助开发者管理jar包，将开发所需jar包下载到本地<ul>
-<li>Maven Center：<a href="https://mvnrepository.com/" target="_blank" rel="external">https://mvnrepository.com/</a></li>
-<li>本地 Center：~/.m2/repository/</li>
-</ul>
-</li>
-<li>开发者导入基础项目（src+pom.xml）后，仅需关注dependency，添加到pom.xml-&gt;dependencies即可</li>
-<li><img src="/images/Q1.png" alt=""></li>
-</ul>
-<hr>
-<ul>
-<li><img src="/images/F5920264-3EF4-4A07-8487-5FCAA3F2AB80.png" alt=""></li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="创建Spring_Boot基础工程">创建Spring Boot基础工程</h1><ul>
-<li>打开<a href="http://start.spring.io/" target="_blank" rel="external">http://start.spring.io/</a> ，如下图操作：</li>
-<li><img src="/images/6.gif" alt=""></li>
-</ul>
-<hr>
-<h1 id="Eclipse导入Maven工程">Eclipse导入Maven工程</h1><ul>
-<li>import-&gt;Maven-&gt;Existing Maven Projects,如下图：</li>
-<li><img src="/images/5.gif" alt=""></li>
-</ul>
-<h1 id="high起来啦">high起来啦</h1></span>
+        <span itemprop="articleBody"><hr>
+<p>web api</p>
+<a id="more"></a>
+<h2 id="扫码支付总账查询">扫码支付总账查询</h2><h3 id="REQ">REQ</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">pay_type</td>
+<td style="text-align:left">支付渠道</td>
+</tr>
+<tr>
+<td style="text-align:left">bill_date_start</td>
+<td style="text-align:left">账单日期</td>
+</tr>
+<tr>
+<td style="text-align:left">bill_date_end</td>
+<td style="text-align:left">账单日期</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  tradeCode:transpaytotal.selectByPrimaryKey</span><br><span class="line">  pay_type:05</span><br><span class="line">  bill_date_start:2017-09-01</span><br><span class="line">  bill_date_end:2017-11-11</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="RESP">RESP</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">bill_date</td>
+<td style="text-align:left">账单日期</td>
+</tr>
+<tr>
+<td style="text-align:left">pay_type_name</td>
+<td style="text-align:left">支付渠道</td>
+</tr>
+<tr>
+<td style="text-align:left">check_result_name</td>
+<td style="text-align:left">对账结果</td>
+</tr>
+<tr>
+<td style="text-align:left">check_date</td>
+<td style="text-align:left">对账时间</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">    "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">    "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">        &#123;</span><br><span class="line">            "<span class="attribute">bill_date</span>": <span class="value"><span class="string">"2017-08-06"</span></span>,</span><br><span class="line">            "<span class="attribute">check_result_code</span>": <span class="value"><span class="string">"0"</span></span>,</span><br><span class="line">            "<span class="attribute">check_date</span>": <span class="value"><span class="string">"2017-08-07 13:49:29"</span></span>,</span><br><span class="line">            "<span class="attribute">last_check_date</span>": <span class="value"><span class="string">"2017-08-01 13:49:29"</span></span>,</span><br><span class="line">            "<span class="attribute">pay_type</span>": <span class="value"><span class="string">"05"</span></span>,</span><br><span class="line">            "<span class="attribute">Id</span>": <span class="value"><span class="number">1</span></span><br><span class="line">        </span>&#125;</span><br><span class="line">    ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="扫码支付错账明细查询">扫码支付错账明细查询</h2><h3 id="REQ-1">REQ</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">total_id</td>
+<td style="text-align:left">结账id 总账索引</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  tradeCode:transpaytotalerror.selectByPrimaryKey</span><br><span class="line">  total_id : 1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="RESP-1">RESP</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">bill_date</td>
+<td style="text-align:left">账单日期</td>
+</tr>
+<tr>
+<td style="text-align:left">trade_no</td>
+<td style="text-align:left">订单号</td>
+</tr>
+<tr>
+<td style="text-align:left">pay_type</td>
+<td style="text-align:left">支付渠道</td>
+</tr>
+<tr>
+<td style="text-align:left">error_code</td>
+<td style="text-align:left">差错类型</td>
+</tr>
+<tr>
+<td style="text-align:left">error_amount</td>
+<td style="text-align:left">差错金额</td>
+</tr>
+<tr>
+<td style="text-align:left">order_status</td>
+<td style="text-align:left">订单状态</td>
+</tr>
+<tr>
+<td style="text-align:left">card_no</td>
+<td style="text-align:left">卡号</td>
+</tr>
+<tr>
+<td style="text-align:left">merchant_id</td>
+<td style="text-align:left">商户号</td>
+</tr>
+<tr>
+<td style="text-align:left">check_date</td>
+<td style="text-align:left">对账时间</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">    "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">    "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">        &#123;</span><br><span class="line">            "<span class="attribute">total_id</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">            "<span class="attribute">bill_date</span>": <span class="value"><span class="string">"2017-08-06"</span></span>,</span><br><span class="line">            "<span class="attribute">check_id</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">            "<span class="attribute">merchant_id</span>": <span class="value"><span class="string">"105520025946"</span></span>,</span><br><span class="line">            "<span class="attribute">set_flag</span>": <span class="value"><span class="string">"0"</span></span>,</span><br><span class="line">            "<span class="attribute">error_amount</span>": <span class="value"><span class="string">"1"</span></span>,</span><br><span class="line">            "<span class="attribute">card_no</span>": <span class="value"><span class="string">"9210000199000225058"</span></span>,</span><br><span class="line">            "<span class="attribute">error_desc</span>": <span class="value"><span class="string">"支付渠道支付订单在本地数据中未找到"</span></span>,</span><br><span class="line">            "<span class="attribute">check_date</span>": <span class="value"><span class="string">"2017-08-07 13:49:29"</span></span>,</span><br><span class="line">            "<span class="attribute">trade_no</span>": <span class="value"><span class="string">"20170823160321361000010000000077"</span></span>,</span><br><span class="line">            "<span class="attribute">pay_type</span>": <span class="value"><span class="string">"05"</span></span>,</span><br><span class="line">            "<span class="attribute">error_code</span>": <span class="value"><span class="string">"01"</span></span>,</span><br><span class="line">            "<span class="attribute">Id</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">            "<span class="attribute">pay_id</span>": <span class="value"><span class="number">30</span></span><br><span class="line">        </span>&#125;</span><br><span class="line">    ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="差错明细平账">差错明细平账</h2><h3 id="REQ-2">REQ</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Id</td>
+<td style="text-align:left">结账id</td>
+</tr>
+<tr>
+<td style="text-align:left">isCheck</td>
+<td style="text-align:left">是否结账</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  tradeCode: transdetail.updateByPrimaryKeySelective</span><br><span class="line">  Id:1</span><br><span class="line">  isCheck:1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="RESP-2">RESP</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">    "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+</span>
       
     </div>
 
@@ -321,7 +361,7 @@ apache-maven-3.3.">
       
         <div class="post-tags">
           
-            <a href="/tags/Maven-Spring-Boot/" rel="tag">#Maven,Spring Boot</a>
+            <a href="/tags/API/" rel="tag">#API</a>
           
         </div>
       
@@ -330,13 +370,11 @@ apache-maven-3.3.">
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/25/webapi/" rel="prev">web api</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/28/hexo-summary/" rel="next">hexo-summary</a>
+              <a href="/2017/03/25/webapi/" rel="next">web api</a>
             
           </div>
         </div>
@@ -361,8 +399,8 @@ apache-maven-3.3.">
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2017/01/17/maven/"
-                   data-title="Build Spring Boot with Maven" data-url="http://jeremyda.github.io/2017/01/17/maven/">
+              <div class="ds-thread" data-thread-key="2017/11/20/hefeicard/"
+                   data-title="hefeicard api" data-url="http://jeremyda.github.io/2017/11/20/hefeicard/">
               </div>
             
           </div>
@@ -444,7 +482,7 @@ apache-maven-3.3.">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven"><span class="nav-number">1.</span> <span class="nav-text">Maven</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建Spring_Boot基础工程"><span class="nav-number">2.</span> <span class="nav-text">创建Spring Boot基础工程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Eclipse导入Maven工程"><span class="nav-number">3.</span> <span class="nav-text">Eclipse导入Maven工程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#high起来啦"><span class="nav-number">4.</span> <span class="nav-text">high起来啦</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#扫码支付总账查询"><span class="nav-number">1.</span> <span class="nav-text">扫码支付总账查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REQ"><span class="nav-number">1.1.</span> <span class="nav-text">REQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESP"><span class="nav-number">1.2.</span> <span class="nav-text">RESP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扫码支付错账明细查询"><span class="nav-number">2.</span> <span class="nav-text">扫码支付错账明细查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REQ-1"><span class="nav-number">2.1.</span> <span class="nav-text">REQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESP-1"><span class="nav-number">2.2.</span> <span class="nav-text">RESP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#差错明细平账"><span class="nav-number">3.</span> <span class="nav-text">差错明细平账</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REQ-2"><span class="nav-number">3.1.</span> <span class="nav-text">REQ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESP-2"><span class="nav-number">3.2.</span> <span class="nav-text">RESP</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
