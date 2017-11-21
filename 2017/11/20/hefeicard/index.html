@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://jeremyda.github.io/2017/11/20/hefeicard/index.html">
 <meta property="og:site_name" content="Jeremy's blog!">
 <meta property="og:description" content="web api">
-<meta property="og:updated_time" content="2017-11-20T08:07:59.000Z">
+<meta property="og:updated_time" content="2017-11-21T08:18:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hefeicard api">
 <meta name="twitter:description" content="web api">
@@ -333,12 +333,16 @@
 <td style="text-align:left">结账id</td>
 </tr>
 <tr>
-<td style="text-align:left">isCheck</td>
-<td style="text-align:left">是否结账</td>
+<td style="text-align:left">set_flag</td>
+<td style="text-align:left">1:账平，0-账不平</td>
+</tr>
+<tr>
+<td style="text-align:left">remarks</td>
+<td style="text-align:left">备注</td>
 </tr>
 </tbody>
 </table>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  tradeCode: transdetail.updateByPrimaryKeySelective</span><br><span class="line">  Id:1</span><br><span class="line">  isCheck:1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  tradeCode: transpaytotalerror.updateByPrimaryKeySelective</span><br><span class="line">  Id:1</span><br><span class="line">  set_flag:1</span><br><span class="line">  remarks:</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="RESP-2">RESP</h3><table>
 <thead>
 <tr>
