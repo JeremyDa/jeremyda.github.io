@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://jeremyda.github.io/2017/03/25/webapi/index.html">
 <meta property="og:site_name" content="Jeremy's blog!">
 <meta property="og:description" content="web api">
-<meta property="og:updated_time" content="2018-01-18T08:29:54.000Z">
+<meta property="og:updated_time" content="2018-01-25T06:14:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web api">
 <meta name="twitter:description" content="web api">
@@ -1736,9 +1736,14 @@
 <td style="text-align:left">结束时间</td>
 </tr>
 <tr>
-<td style="text-align:left">deptid</td>
-<td style="text-align:left">0000</td>
+<td style="text-align:left">fDeptid</td>
+<td style="text-align:left">0000,1000,1100</td>
 <td style="text-align:left">机构号,对应t_branch.F_DEPTID</td>
+</tr>
+<tr>
+<td style="text-align:left">fLevel</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">机构级别,对应t_branch.F_LEVEL</td>
 </tr>
 <tr>
 <td style="text-align:left">fAcno</td>
@@ -1772,7 +1777,7 @@
 </tr>
 </tbody>
 </table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>": <span class="value"><span class="string">"mtrans.selectTrcdSummary"</span></span><br><span class="line">  <span class="string">"startdate"</span>:<span class="string">"2014-01-01"</span></span>,</span><br><span class="line">  "<span class="attribute">enddate</span>":<span class="value"><span class="string">"2017-01-01"</span></span>,</span><br><span class="line">  "<span class="attribute">starttime</span>":<span class="value"><span class="string">"090000"</span></span>,</span><br><span class="line">  "<span class="attribute">endtime</span>":<span class="value"><span class="string">"180000"</span></span>,</span><br><span class="line">  "<span class="attribute">deptid</span>":<span class="value"><span class="string">"0000"</span></span>,</span><br><span class="line">  "<span class="attribute">fAcno</span>":<span class="value"><span class="string">"6222022203004040596"</span></span>,</span><br><span class="line">  "<span class="attribute">fAcctno</span>":<span class="value"><span class="string">"55555555555"</span></span>,</span><br><span class="line">  "<span class="attribute">fDevid</span>":<span class="value"><span class="string">"34015001"</span></span>,</span><br><span class="line">  "<span class="attribute">fIdno</span>":<span class="value"><span class="string">"6666666666"</span></span>,</span><br><span class="line">  "<span class="attribute">fRet</span>":<span class="value"><span class="string">"0"</span></span>,</span><br><span class="line">  "<span class="attribute">fTrcd</span>":<span class="value"><span class="string">"取款"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">tradeCode</span>":<span class="value"><span class="string">"mtrans.selectTrcdSummary"</span></span><br><span class="line">  <span class="string">"startdate"</span>:<span class="string">"20140101"</span></span>,</span><br><span class="line">  "<span class="attribute">enddate</span>":<span class="value"><span class="string">"20170101"</span></span>,</span><br><span class="line">  "<span class="attribute">starttime</span>":<span class="value"><span class="string">"090000"</span></span>,</span><br><span class="line">  "<span class="attribute">endtime</span>":<span class="value"><span class="string">"180000"</span></span>,</span><br><span class="line">  "<span class="attribute">fDeptid</span>":<span class="value"><span class="string">"0000,1000,1100"</span></span>,</span><br><span class="line">  "<span class="attribute">fLevel</span>":<span class="value"><span class="string">"2"</span></span>,</span><br><span class="line">  "<span class="attribute">fAcno</span>":<span class="value"><span class="string">"6222022203004040596"</span></span>,</span><br><span class="line">  "<span class="attribute">fAcctno</span>":<span class="value"><span class="string">"55555555555"</span></span>,</span><br><span class="line">  "<span class="attribute">fDevid</span>":<span class="value"><span class="string">"34015001"</span></span>,</span><br><span class="line">  "<span class="attribute">fIdno</span>":<span class="value"><span class="string">"6666666666"</span></span>,</span><br><span class="line">  "<span class="attribute">fRet</span>":<span class="value"><span class="string">"0"</span></span>,</span><br><span class="line">  "<span class="attribute">fTrcd</span>":<span class="value"><span class="string">"取款"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="RESP-24">RESP</h3><table>
 <thead>
 <tr>
