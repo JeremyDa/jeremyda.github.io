@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://jeremyda.github.io/2017/03/25/webapi/index.html">
 <meta property="og:site_name" content="Jeremy's blog!">
 <meta property="og:description" content="web api">
-<meta property="og:updated_time" content="2018-01-29T07:18:42.000Z">
+<meta property="og:updated_time" content="2018-02-05T03:08:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web api">
 <meta name="twitter:description" content="web api">
@@ -1411,6 +1411,7 @@
 </tr>
 </tbody>
 </table>
+<p>| fUkeyid |    char20    |    UKey凭证号 |<br>| fUsrname |    char20    |    姓名 |<br>| fPhone |    char20    |    手机号码 |<br>| fBoxno |    char1    |    key箱号 |<br>| fPzflag |    char4    |    凭证上传标志 |</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "<span class="attribute">rspCode</span>": <span class="value"><span class="string">"00"</span></span>,</span><br><span class="line">    "<span class="attribute">rspMsg</span>": <span class="value"><span class="string">"交易成功"</span></span>,</span><br><span class="line">    "<span class="attribute">serial</span>": <span class="value"><span class="string">"49e7cd13-af4a-481b-93d7-8e644fd0a8c0"</span></span>,</span><br><span class="line">    "<span class="attribute">listInfo</span>": <span class="value">[</span><br><span class="line">        &#123;</span><br><span class="line">            "<span class="attribute">fTime1</span>": <span class="value"><span class="string">"12:00"</span></span>,</span><br><span class="line">            "<span class="attribute">fIdno</span>": <span class="value"><span class="string">"341232191102028897"</span></span>,</span><br><span class="line">            "<span class="attribute">fOperator</span>": <span class="value"><span class="string">"123"</span></span>,</span><br><span class="line">            "<span class="attribute">fZhname</span>": <span class="value"><span class="string">"太原市城区联社"</span></span>,</span><br><span class="line">            "<span class="attribute">fType</span>": <span class="value"><span class="string">"二代证"</span></span>,</span><br><span class="line">            "<span class="attribute">fDate1</span>": <span class="value"><span class="string">"2017-07-20"</span></span>,</span><br><span class="line">            "<span class="attribute">fFhname</span>": <span class="value"><span class="string">"太原"</span></span>,</span><br><span class="line">            "<span class="attribute">fDate</span>": <span class="value"><span class="string">"20170720"</span></span>,</span><br><span class="line">            "<span class="attribute">fDevls</span>": <span class="value"><span class="string">"222"</span></span>,</span><br><span class="line">            "<span class="attribute">fUsrName</span>": <span class="value"><span class="string">"ggg"</span></span>,</span><br><span class="line">            "<span class="attribute">fPay</span>": <span class="value"><span class="string">"转账"</span></span>,</span><br><span class="line">            "<span class="attribute">fResult</span>": <span class="value"><span class="string">"成功"</span></span>,</span><br><span class="line">            "<span class="attribute">fFee</span>": <span class="value"><span class="number">0</span></span>,</span><br><span class="line">            "<span class="attribute">fAcctno</span>": <span class="value"><span class="string">"12345"</span></span>,</span><br><span class="line">            "<span class="attribute">fAcno</span>": <span class="value"><span class="string">"621778831830051495"</span></span>,</span><br><span class="line">            "<span class="attribute">fCdno</span>": <span class="value"><span class="string">"3333333333333"</span></span>,</span><br><span class="line">            "<span class="attribute">fDept</span>": <span class="value"><span class="string">"0003"</span></span>,</span><br><span class="line">            "<span class="attribute">fDevid</span>": <span class="value"><span class="string">"34015000"</span></span>,</span><br><span class="line">            "<span class="attribute">fTime</span>": <span class="value"><span class="string">"1200"</span></span>,</span><br><span class="line">            "<span class="attribute">fWdname</span>": <span class="value"><span class="string">"测试营业部"</span></span>,</span><br><span class="line">            "<span class="attribute">fUsrno</span>": <span class="value"><span class="string">"001"</span></span>,</span><br><span class="line">            "<span class="attribute">fRetno</span>": <span class="value"><span class="string">"0000"</span></span><br><span class="line">        </span>&#125;</span><br><span class="line">      ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="加卡记录查询">加卡记录查询</h2><h3 id="REQ-41">REQ</h3><table>
 <thead>
@@ -1458,6 +1459,7 @@
 </tr>
 </tbody>
 </table>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  tradeCode : addcard.selectAddcardRecord</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="RESP-22">RESP</h3><table>
 <thead>
 <tr>
@@ -1491,6 +1493,11 @@
 <td style="text-align:left">fCount</td>
 <td style="text-align:left">double</td>
 <td style="text-align:left">张数</td>
+</tr>
+<tr>
+<td style="text-align:left">fBoxno</td>
+<td style="text-align:left">char1</td>
+<td style="text-align:left">卡箱号/key箱号</td>
 </tr>
 <tr>
 <td style="text-align:left">fStart</td>
@@ -1581,6 +1588,7 @@
 </tr>
 </tbody>
 </table>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  tradeCode : clear.selectClearRecord</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="RESP-23">RESP</h3><table>
 <thead>
 <tr>
@@ -1614,6 +1622,11 @@
 <td style="text-align:left">fCount</td>
 <td style="text-align:left">double</td>
 <td style="text-align:left">张数</td>
+</tr>
+<tr>
+<td style="text-align:left">fBoxno</td>
+<td style="text-align:left">char1</td>
+<td style="text-align:left">卡箱号/key箱号</td>
 </tr>
 <tr>
 <td style="text-align:left">fStart</td>
@@ -1720,6 +1733,11 @@
 </thead>
 <tbody>
 <tr>
+<td style="text-align:left">fEid</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">类型：9901－吞卡，9902－吞ukey</td>
+</tr>
+<tr>
 <td style="text-align:left">fDate</td>
 <td style="text-align:left"></td>
 <td style="text-align:left">日期</td>
@@ -1747,7 +1765,17 @@
 <tr>
 <td style="text-align:left">fAcno</td>
 <td style="text-align:left"></td>
-<td style="text-align:left">卡号</td>
+<td style="text-align:left">卡号/ukey号</td>
+</tr>
+<tr>
+<td style="text-align:left">fResult</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">吞卡/ukey原因</td>
+</tr>
+<tr>
+<td style="text-align:left">fPad1</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">卡箱号/key箱号</td>
 </tr>
 <tr>
 <td style="text-align:left">fInstaddr</td>
